@@ -6,7 +6,7 @@ class CaesarCipher
 
   def encryption
     @text.each_char do |letter|
-      @key.times { letter = letter.next! } if ('a'..'z').include?(letter.downcase)
+      @key.times { letter = letter.next } if ('a'..'z').include?(letter.downcase)
       @encrypted_string << letter[-1]
     end
     @encrypted_string
